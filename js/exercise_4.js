@@ -28,8 +28,8 @@ featureLayer.on('ready', function() {
   this.eachLayer(function(layer){
     layer.setIcon(L.mapbox.marker.icon({
       'marker-color': '#fa0',
-      'marker-size': 'large',
-      'marker-symbol': 'restaurant'
+      'marker-size': 'small',
+      'marker-symbol': 'bank'
     }))
   });
   map.fitBounds(featureLayer.getBounds());
