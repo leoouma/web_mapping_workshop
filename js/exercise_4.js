@@ -38,6 +38,6 @@ featureLayer.on('ready', function() {
 // Adding popup
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
-    layer.bindPopup('Account Opening Vailable? ' + layer.feature.properties.Account_Op);
+    layer.bindPopup('Account opening available? ' + layer.feature.properties.Account_Op);
   });
 });
