@@ -18,3 +18,19 @@ map.setView([-0.0236, 37.962], 6);
 // Great, now we have a basic web map!
 
 var dataFileToAdd = 'data/mpesaPoints.geojson';
+
+//Then we need to create a featureLayer to hold the data
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL(dataFileToAdd)
+    .addTo(map);
+//Finally we're going to set the style and zoom the map to the layer once the featureLayer is ready to render
+featureLayer.on('ready', function() {
+  this.eachLayer(function(layer){
+    layer.setIcon(L.mapbox.marker.icon({
+      'marker-color': '#8834bb',
+      'marker-size': 'large',
+      'marker-symbol': 'restaurant'
+    }))
+  });
+  map.fitBounds(featureLayer.getBounds());
+});
