@@ -38,6 +38,6 @@ featureLayer.on('ready', function() {
 // Adding popup
 featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
-    layer.bindPopup('Welcome to ' + layer.feature.properties.name);
+    layer.bindPopup('Welcome to ' + layer.feature.properties.Other_Busi);
   });
 });
