@@ -16,3 +16,5 @@ var map = L.mapbox.map('map', mapId);
 map.setView([-0.0236, 37.962], 6);
 
 // Great, now we have a basic web map!
+
+var dataFileToAdd = 'data/mpesaPoints.geojson';
